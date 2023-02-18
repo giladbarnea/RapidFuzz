@@ -50,11 +50,12 @@ setup_args = {
 
 
 def run_setup(with_binary):
-    if with_binary:
+    if with_binary and False:
         from skbuild import setup
 
         setup(**setup_args)
     else:
+        print("************ Building without C++ extension")
         from setuptools import setup
 
         setup(**setup_args)
